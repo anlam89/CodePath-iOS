@@ -4,7 +4,7 @@
 
 Submitted by: **AN LAM**
 
-Time spent: **4** hours spent in total
+Time spent: **8** hours spent in total
 
 ## User Stories
 
@@ -28,7 +28,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://imgur.com/a/Y5NTAPL.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://imgur.com/OiQQDJh.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
@@ -38,7 +38,7 @@ Describe any challenges encountered while building the app.
 
 Got problem with using github with Xcode.
 
-Never use MAC before, feel unfamiliar with it. 
+Never use MAC before, feel unfamiliar with file structure. 
 
 ## License
 
