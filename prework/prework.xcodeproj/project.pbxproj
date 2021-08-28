@@ -15,7 +15,6 @@
 		58283A6F26D6A39900FD1E5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58283A6D26D6A39900FD1E5D /* LaunchScreen.storyboard */; };
 		58283A7A26D6A39900FD1E5D /* preworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58283A7926D6A39900FD1E5D /* preworkTests.swift */; };
 		58283A8526D6A39900FD1E5D /* preworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58283A8426D6A39900FD1E5D /* preworkUITests.swift */; };
-		586F2B9026DAF40900F5A3C8 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586F2B8F26DAF40900F5A3C8 /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +49,6 @@
 		58283A8026D6A39900FD1E5D /* preworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = preworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58283A8426D6A39900FD1E5D /* preworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = preworkUITests.swift; sourceTree = "<group>"; };
 		58283A8626D6A39900FD1E5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		586F2B8F26DAF40900F5A3C8 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +132,6 @@
 		586F2B9126DAF47200F5A3C8 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				586F2B8F26DAF40900F5A3C8 /* SettingViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -273,7 +270,6 @@
 				58283A6726D6A39800FD1E5D /* ViewController.swift in Sources */,
 				58283A6326D6A39800FD1E5D /* AppDelegate.swift in Sources */,
 				58283A6526D6A39800FD1E5D /* SceneDelegate.swift in Sources */,
-				586F2B9026DAF40900F5A3C8 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

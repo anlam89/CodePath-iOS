@@ -54,8 +54,8 @@ class ViewController: UIViewController {
     
     @IBAction func tipSliderValueChange(_ sender: Any) {
         let bill = Double(billAmountTextField.text!) ?? 0
-        let tipRate = Double(tipSlider.value)
-        print(tipRate * 100)
+        let tipRate = (Double(tipSlider.value)*100).rounded()/100
+        print(tipRate)
         let tip = bill * tipRate
         
         let total = bill + tip
