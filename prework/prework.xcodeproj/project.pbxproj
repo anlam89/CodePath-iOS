@@ -15,6 +15,7 @@
 		58283A6F26D6A39900FD1E5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58283A6D26D6A39900FD1E5D /* LaunchScreen.storyboard */; };
 		58283A7A26D6A39900FD1E5D /* preworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58283A7926D6A39900FD1E5D /* preworkTests.swift */; };
 		58283A8526D6A39900FD1E5D /* preworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58283A8426D6A39900FD1E5D /* preworkUITests.swift */; };
+		586F2B9026DAF40900F5A3C8 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586F2B8F26DAF40900F5A3C8 /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		58283A8026D6A39900FD1E5D /* preworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = preworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58283A8426D6A39900FD1E5D /* preworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = preworkUITests.swift; sourceTree = "<group>"; };
 		58283A8626D6A39900FD1E5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		586F2B8F26DAF40900F5A3C8 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		58283A6126D6A39800FD1E5D /* prework */ = {
 			isa = PBXGroup;
 			children = (
+				586F2B9126DAF47200F5A3C8 /* View Controllers */,
 				58283A6226D6A39800FD1E5D /* AppDelegate.swift */,
 				58283A6426D6A39800FD1E5D /* SceneDelegate.swift */,
 				58283A6626D6A39800FD1E5D /* ViewController.swift */,
@@ -126,6 +129,14 @@
 				58283A8626D6A39900FD1E5D /* Info.plist */,
 			);
 			path = preworkUITests;
+			sourceTree = "<group>";
+		};
+		586F2B9126DAF47200F5A3C8 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				586F2B8F26DAF40900F5A3C8 /* SettingViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +206,7 @@
 				TargetAttributes = {
 					58283A5E26D6A39800FD1E5D = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 					58283A7426D6A39900FD1E5D = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -261,6 +273,7 @@
 				58283A6726D6A39800FD1E5D /* ViewController.swift in Sources */,
 				58283A6326D6A39800FD1E5D /* AppDelegate.swift in Sources */,
 				58283A6526D6A39800FD1E5D /* SceneDelegate.swift in Sources */,
+				586F2B9026DAF40900F5A3C8 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +449,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = prework/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -444,6 +458,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = memo.com.prework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -454,6 +469,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = prework/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

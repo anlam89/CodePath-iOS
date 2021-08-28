@@ -8,10 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     
     @IBOutlet weak var billAmountTextField: UITextField!
-    
     @IBOutlet weak var tipAmountLabel: UILabel!
     
     @IBOutlet weak var tipControl: UISegmentedControl!
@@ -20,68 +18,80 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var totalLabel: UILabel!
     
-
     @IBOutlet weak var tipRateLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         billAmountTextField.keyboardType = .numberPad
         billAmountTextField.text = "0.00"
-        
+        tipRateLabel.text = "15%"
        // billAmountTextField.reloadInputViews()
         // Do any additional setup after loading the view.
     }
-
-    @IBAction func calculateTip(_ sender: Any) {
-        tipOrBillValueChange()
-    }
-  
-    @IBAction func abc(_ sender: Any) {
-        tipOrBillValueChange()
-    }
-    
-    @IBAction func tipSlideValueChange(_ sender: Any) {
-        tipOrBillValueChange()
-    }
-    @IBAction func bilAmountTextFieldTouchDown(_ sender: Any) {
+    @IBAction func billAmountTextFieldTouchDown(_ sender: Any) {
         if(billAmountTextField.text == "0.00"){
             billAmountTextField.text = nil
         }
-        
     }
     
-    @IBAction func billAmountTextFieldTouchUp(_ sender: Any) {
-        if(billAmountTextField == nil){
-            billAmountTextField.text = "0.00"
-        }
-    }
-
-    func tipOrBillValueChange(){
-        //Get bill amount from text field input
+    @IBAction func billAmountTextFieldEditingChange(_ sender: Any) {
         let bill = Double(billAmountTextField.text!) ?? 0
         
-        //create values for tipPercentages
-        let tipPercentages = [0.15, 0.18, 0.2]
+        let tipCustom = Double(tipSlider.value)
+        let tipPercentages = [0.15, 0.18, 0.2, tipCustom]
+        let tipRate = tipPercentages[tipControl.selectedSegmentIndex]
+        print(tipRate * 100)
+        let tip = bill * tipRate
         
-        let tipValue = tipPercentages[tipControl.selectedSegmentIndex]
-        
-        //get total tip = bill * tipPercentages
-        let tip = bill * tipValue
-        
-        //Calculate total = bill + tip
         let total = bill + tip
         
-        //Update tip Amount Label
+        tipRateLabel.text = String(format: "%d%%", Int(tipRate  * 100))
+        
         tipAmountLabel.text = String(format: "$%.2f", tip)
         
-        //Update total Label
+        totalLabel.text = String(format: "$%.2f", total)
+    }
+    
+    @IBAction func tipSliderValueChange(_ sender: Any) {
+        let bill = Double(billAmountTextField.text!) ?? 0
+        let tipRate = Double(tipSlider.value)
+        print(tipRate * 100)
+        let tip = bill * tipRate
+        
+        let total = bill + tip
+        
+        tipRateLabel.text = String(format: "%d%%", Int(tipRate  * 100))
+        
+        tipAmountLabel.text = String(format: "$%.2f", tip)
+        
         totalLabel.text = String(format: "$%.2f", total)
         
-        //Update tipSlider
-        tipSlider.value = Float(tipValue)
+        tipControl.selectedSegmentIndex = 3
+    }
+    
+    @IBAction func tipControlValueChange(_ sender: Any) {
+        let bill = Double(billAmountTextField.text!) ?? 0
         
-        //Upadate tip rate
-        tipRateLabel.text = String(format: "%d%%" + "%", Int(tipValue * 100))
+        let tipCustom = Double(tipSlider.value)
+        let tipPercentages = [0.15, 0.18, 0.2, tipCustom]
+        let tipRate = tipPercentages[tipControl.selectedSegmentIndex]
+        print(tipRate * 100)
+        let tip = bill * tipRate
+        
+        let total = bill + tip
+        
+        tipRateLabel.text = String(format: "%d%%", Int(tipRate  * 100))
+        
+        tipAmountLabel.text = String(format: "$%.2f", tip)
+        
+        totalLabel.text = String(format: "$%.2f", total)
+        
+        tipSlider.value = Float(tipRate)
+    }
+    
+    
+    @IBAction func settingButtonTouchUpInside(_ sender: Any) {
+        
     }
 }
 
